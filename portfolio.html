@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somalatha Gowrabathina | BTech Student Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary-color: #4a6cf7;
+            --secondary-color: #6f42c1;
+            --dark-color: #1d2144;
+            --light-color: #f8f9fa;
+            --text-color: #333;
+            --transition: all 0.3s ease;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--dark-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            background: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
+            text-align: center;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            color: var(--dark-color);
+            margin-bottom: 20px;
+        }
+        
+        .hero-content h1 span {
+            color: var(--primary-color);
+        }
+        
+        .hero-content p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #555;
+        }
+        
+        .hero-image {
+            margin-top: 50px;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: block;
+            text-align: center;
+        }
+        
+        .about-text {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-text h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .about-text p {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+        education-section {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    border-left: 4px solid #4A90E2;
+    background-color: #f9f9f9;
+  }
+
+  .education-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .education-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .education-item h3 {
+    margin: 0;
+    color: #4A90E2;
+  }
+
+  .education-item p {
+    margin: 5px 0;
+    color: #555;
+  }
+
+        
+        /* Skills Section */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .skill-item h3 {
+            margin-bottom: 15px;
+            color: var(--dark-color);
+        }
+        
+        /* Projects Section */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-item {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .project-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .project-item:hover .project-image img {
+            transform: scale(1.1);
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        /* Resume Section */
+        .resume-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .resume-content p {
+            margin-bottom: 30px;
+        }
+        
+        /* Certificates Section */
+        .certificates-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .certificate-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .certificate-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .certificate-item h3 {
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
+        
+        .contact-details {
+            list-style: none;
+        }
+        
+        .contact-details li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .contact-details i {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-right: 15px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            margin-bottom: 30px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin: 20px 0;
+        }
+        
+        .social-links li {
+            margin: 0 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            color: var(--primary-color);
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 36px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 28px;
+            }
+            
+            .hero {
+                padding-top: 120px;
+            }
+            
+            .hero-content h1 {
+                font-size: 32px;
+            }
+            
+            .projects-container,
+            .certificates-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Port<span>folio</span></div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="#certificates">Certificates</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span>Somalatha Gowrabathina</span></h1>
+                <p>A passionate BTech Student specializing in Computer Science with expertise in Artificial Intelligence, web technologies, and problem-solving.</p>
+                <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+            <div class="hero-image">
+                <img src="C:\Users\G Somalatha\Downloads\IMG_20250811_125130.jpg" width="400" height="400ss" alt="Somalatha">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>BTech Computer Science Student</h3>
+                    <p>I am a passionate and dedicated Computer Science student with a strong interest in software development, web technologies, and artificial intelligence. Currently pursuing my BTech degree from NBKR Institute of Science and Technology.</p>
+                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or participating in coding competitions. I believe in continuous learning and staying updated with the latest industry trends.</p>
+                    <p>My goal is to secure a challenging position in a reputable organization where I can expand my learnings, knowledge, and skills while making a significant contribution to the success of the company.</p>
+                    <div class="education-section">
+  <h2>Education Details</h2>
+
+  <div class="education-item">
+    <h3>B.Tech</h3>
+    <p><strong>NBKR Institute of Science and Technology</strong></p>
+    <p>2022 – 2026</p>
+  </div>
+
+  <div class="education-item">
+    <h3>Intermediate</h3>
+    <p><strong>Amaravathi Junior College</strong></p>
+    <p>2020 – 2022</p>
+  </div>
+
+  <div class="education-item">
+    <h3>SSC</h3>
+    <p><strong>RVm High School</strong></p>
+    <p>2019 – 2020</p>
+  </div>
+</div>
+                    <a href="#resume" class="btn">View My Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Skills</h2>
+            </div>
+            <div class="skills-container">
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, React.js</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i> <!-- Represents AI -->
+                  </div>
+
+                    <h3>Artificial intelligence</h3>
+                    <p>Familiar with AI tools</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Management</h3>
+                    <p>MySQL, Oracle</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Programming Languages</h3>
+                    <p>Python,basics of C</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Projects</h2>
+            </div>
+            <div class="projects-container">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="https://placehold.co/400x300/4a6cf7/ffffff?text=Online Food+App" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>online food app</h3>
+                        <p>A full-stack e-commerce platform built with React, Node.js.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="https://placehold.co/400x300/6f42c1/ffffff?text=Online Flowers+App" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Online flowers App</h3>
+                        <p>Fresh blooms delivered with love—your go-to online flower shop for every occasion.</p>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="https://placehold.co/400x300/4a6cf7/ffffff?text=Coffee+App" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>coffee App</h3>
+                        <p>Your daily brew companion—order, track, and savor coffee like never before.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Resume</h2>
+            </div>
+            <div class="resume-content">
+                <p>Download my resume to learn more about my education, experience, and skills.</p>
+                <a href="C:\Users\G Somalatha\Downloads\Somalatha-NBKR.pdf" class="btn"><i class="fas fa-download"></i> Download Resume</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <div class="section-title">
+                <h2>My Certificates</h2>
+            </div>
+            <div class="certificates-container">
+                <div class="certificate-item">
+                    <h3>Mercy Technologies</h3>
+                    <p>Certification of Participation-python</p>
+                </div>
+                <div class="certificate-item">
+                    <h3>IEEE industrial Electronics Society</h3>
+                    <p>SBC LBSCEK- 2024</p>
+                </div>
+                <div class="certificate-item">
+                    <h3>NPTEL Online Certification</h3>
+                    <p>Privacy and Security in Online Social Media</p>
+                </div>
+                <div class="certificate-item">
+                    <h3>GitHub Course</h3>
+                    <p>Certification of Participation-Git and GitHub Course</p>
+                </div>
+                <div class="certificate-item">
+                    <h3>AI Fundamentals IBM Skills Build</h3>
+                    <p>AI Fundamentals-IBM Skills Build(Aug 2025)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>somalathagowrabathina@gmail.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>9989016719</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bangarupeta,Venkatagiri,Tirupati</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <input type="text" placeholder="Subject" required>
+                        <textarea placeholder="Your Message" required></textarea>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">Port<span>folio</span></div>
+                <ul class="social-links">
+                    <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                    <li><a href="#"><i class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 somalatha. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for smooth scrolling and active nav link highlighting
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    
+                    window.scrollTo({
+                        top: targetSection.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Highlight active section in navigation
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section');
+                const navLi = document.querySelectorAll('nav .nav-links li');
+                let current = '';
+                
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (pageYOffset >= sectionTop - 100) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLi.forEach(li => {
+                    li.classList.remove('active');
+                    if (li.querySelector('a').getAttribute('href').substring(1) === current) {
+                        li.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
